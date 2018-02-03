@@ -1,4 +1,4 @@
-package io.androidedu.datapersistance.ui
+package io.androidedu.datapersistance.ui.sharedpref
 
 import android.content.Intent
 import android.content.SharedPreferences

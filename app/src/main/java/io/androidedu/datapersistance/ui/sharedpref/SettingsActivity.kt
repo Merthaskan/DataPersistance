@@ -1,4 +1,4 @@
-package io.androidedu.datapersistance.ui
+package io.androidedu.datapersistance.ui.sharedpref
 
 import android.os.Bundle
 import android.support.v4.app.NavUtils
