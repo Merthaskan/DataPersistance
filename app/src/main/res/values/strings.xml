@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DataPersistance</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="settings">Ayarlar</string>
+
+
+    <string name="key_isBold" translatable="false">isBold</string>
+    <string name="key_isItalic" translatable="false">isItalic</string>
+    <string name="key_color_option" translatable="false">colorOption</string>
+
+    <string name="normal">Normal</string>
+    <string name="bold">Kalın</string>
+    <string name="text_bold">Kalın?</string>
+    <string name="text_italic">İtalik?</string>
+    <string name="italic">İtalik</string>
+    <string name="change_me">Change Me !</string>
+
+    <string name="red">Kırmızı</string>
+    <string name="blue">Mavi</string>
+    <string name="green">Yeşil</string>
+    <string name="red_value" translatable="false">red</string>
+    <string name="blue_value" translatable="false">blue</string>
+    <string name="green_value" translatable="false">green</string>
+    <string name="color_options">Yazı Rengi</string>
+</resources>

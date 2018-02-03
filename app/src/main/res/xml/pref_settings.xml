@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO (1) res icindeki values icine, bools.xml yarat.  -->
+    <!-- TODO (2) @defaultValue degerinin default degerini bools.xml'den al  -->
+    <!-- TODO (3) diger degerleri strings.xml'den al.  -->
+    <!-- TODO (4) res icindeki values icine arrays.xml yarat.  -->
+    <!-- TODO (5) ListPreference icin gerekli olan entries ve entryValues degerlerini array.xml icinden al -->
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/def_isBold"
+        android:key="@string/key_isBold"
+        android:summaryOff="@string/normal"
+        android:summaryOn="@string/bold"
+        android:title="@string/text_bold" />
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/def_isBold"
+        android:key="@string/key_isItalic"
+        android:summaryOff="@string/normal"
+        android:summaryOn="@string/italic"
+        android:title="@string/text_italic" />
+
+    <ListPreference
+        android:defaultValue="@string/blue"
+        android:entries="@array/pref_color_options_text"
+        android:entryValues="@array/pref_color_options_value"
+        android:key="@string/key_color_option"
+        android:title="@string/color_options" />
+</PreferenceScreen>
