@@ -12,15 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ui.sharedpref.MainActivity"
-            android:launchMode="singleTop">
+        <activity android:name=".ui.sql.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.sharedpref.MainActivity"
+            android:launchMode="singleTop"></activity>
         <activity
             android:name=".ui.sharedpref.SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -29,7 +30,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.sharedpref.MainActivity" />
         </activity>
-        <activity android:name=".ui.sql.DashboardActivity"></activity>
     </application>
 
 </manifest>

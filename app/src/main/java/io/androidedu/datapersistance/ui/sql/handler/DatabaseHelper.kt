@@ -29,7 +29,7 @@ class DatabaseHelper(context: Context)
     override fun onCreate(db: SQLiteDatabase?) {
 
         val createTableSQL = "CREATE TABLE $TABLE_GUESTS " +
-                "($KEY_ID INTEGER PRIMARY KEY," +
+                "($KEY_ID INTEGER PRIMARY KEY AUTO_INCREMENT," +
                 "$KEY_NAME TEXT," +
                 "$KEY_SURNAME TEXT," +
                 "$KEY_PHONE TEXT)"
