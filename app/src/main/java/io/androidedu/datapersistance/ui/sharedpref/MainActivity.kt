@@ -1,5 +1,6 @@
 package io.androidedu.datapersistance.ui.sharedpref
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Typeface
@@ -9,6 +10,9 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.preference.PreferenceManager
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.CheckBox
+import android.widget.CompoundButton
+import android.widget.EditText
 import android.widget.TextView
 import io.androidedu.datapersistance.R
 
@@ -22,11 +26,14 @@ import io.androidedu.datapersistance.R
 // TODO (8) onDestroy() icinde sharedPreferences.unregisterOnSharedPreferenceChangeListener(this) ekle.
 
 
-class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
+class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private val txtChangeMe by lazy { findViewById<TextView>(R.id.activity_main_txtChangeMe) }
     private val sharedPreferences by lazy { PreferenceManager.getDefaultSharedPreferences(this) }
+    private val chkRememberMe by lazy { findViewById<CheckBox>(R.id.activity_main_chkRememberMe) }
+    private val edtUserName by lazy { findViewById<EditText>(R.id.activity_main_edtUserName) }
 
+    private var fistTimeFlag = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,6 +42,16 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
     }
 
     private fun initEvent() {
+
+        chkRememberMe.setOnCheckedChangeListener(this)
+
+        val customSharedPreference = getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+
+        if (customSharedPreference.getString("Remembered_Key", "") != "") {
+
+            chkRememberMe.isChecked = true
+            edtUserName.setText(customSharedPreference.getString("Remembered_Key", ""))
+        }
 
         sharedPreferences.registerOnSharedPreferenceChangeListener(this)
 
@@ -93,6 +110,29 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             else -> {
                 R.color.black
             }
+        }
+    }
+
+    override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+
+        if (!fistTimeFlag) {
+
+            val customSharedPreference = getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+            val editor = customSharedPreference.edit()
+
+            customSharedPreference.getInt("key", 2)
+
+            if (isChecked) {
+
+                editor.putString("Remembered_Key", edtUserName.text.toString())
+            } else {
+                editor.putString("Remembered_Key", "")
+            }
+
+            editor.apply()
+            //editor.commit()
+        } else {
+            fistTimeFlag = false
         }
     }
 

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.sql.DashboardActivity"
+            android:name=".ui.sharedpref.MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.sharedpref.MainActivity" />
         </activity>
-        <activity android:name=".ui.sharedpref.MainActivity"></activity>
+        <activity android:name=".ui.sql.DashboardActivity"></activity>
     </application>
 
 </manifest>

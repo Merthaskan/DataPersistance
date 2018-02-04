@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main_txtChangeMe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:text="@string/change_me"
-    tools:context=".ui.sharedpref.MainActivity" />
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.sharedpref.MainActivity">
+
+    <TextView
+        android:id="@+id/activity_main_txtChangeMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_me" />
+
+    <EditText
+        android:id="@+id/activity_main_edtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <CheckBox
+        android:id="@+id/activity_main_chkRememberMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remember_me" />
+</LinearLayout>
