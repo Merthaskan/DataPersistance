@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
 
         txtChangeMe.setTypeface(null, getTypeFace(sharedPreferences!!))
 
-        val colorOption = sharedPreferences.getString(resources.getString(R.string.key_color_option), resources.getString(R.string.red_value))
+        val colorOption = sharedPreferences.getString(resources.getString(R.string.key_color_option), resources.getString(R.string.black_value))
 
         txtChangeMe.setTextColor(ContextCompat.getColor(this, getPrefColor(colorOption)))
     }

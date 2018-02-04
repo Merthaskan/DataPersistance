@@ -5,7 +5,6 @@
     <!-- TODO (1) .MainActivity'e launchMode="singleTop" tanimla. Bunun sebebi, SettingsActivity'den geri donuste, yeni bir MainActivity olusturmamasini garanti etmek icin. -->
     <!-- TODO (2) SettingsActivity olusturulur. parentActivityName=".MainActivity" verilir. -->
     <!-- TODO (3) meta-data olusturulup key-value pair atanir. Bundan daha sonra bahsedecegiz. -->
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,9 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
-            android:name=".ui.sharedpref.MainActivity"
+            android:name=".ui.sql.DashboardActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,17 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.sharedpref.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".ui.sharedpref.MainActivity">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.sharedpref.MainActivity" />
-
         </activity>
+        <activity android:name=".ui.sharedpref.MainActivity"></activity>
     </application>
 
 </manifest>

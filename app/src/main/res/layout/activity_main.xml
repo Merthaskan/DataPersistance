@@ -6,4 +6,4 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:text="@string/change_me"
-    tools:context="com.androideduio.datapersistance.ui.MainActivity" />
+    tools:context=".ui.sharedpref.MainActivity" />

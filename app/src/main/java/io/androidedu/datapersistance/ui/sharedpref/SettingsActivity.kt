@@ -13,7 +13,9 @@ import io.androidedu.datapersistance.R
 class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_settings)
 
         if (supportActionBar != null) {
@@ -26,9 +28,8 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun addSettingsFragment() {
 
-        val settingsFragment = SettingsFragment()
 
-        supportFragmentManager.beginTransaction().add(R.id.activity_settings_frmSettingsFragment, settingsFragment).commit()
+        supportFragmentManager.beginTransaction().add(R.id.activity_settings_frmSettingsFragment, SettingsFragment()).commit()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

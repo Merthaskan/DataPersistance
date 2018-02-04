@@ -22,7 +22,14 @@
     <string name="blue">Mavi</string>
     <string name="green">Yeşil</string>
     <string name="red_value" translatable="false">red</string>
+    <string name="black_value" translatable="false">black</string>
     <string name="blue_value" translatable="false">blue</string>
     <string name="green_value" translatable="false">green</string>
     <string name="color_options">Yazı Rengi</string>
+    <string name="add_guest">Konuk Ekle</string>
+    <string name="save">Kaydet</string>
+    <string name="update">Güncelle</string>
+    <string name="guest_name">Konuk Adı</string>
+    <string name="guest_surname">Konuk Soyadı</string>
+    <string name="guest_phone">Konuk Telefonu</string>
 </resources>

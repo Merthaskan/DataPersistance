@@ -4,4 +4,4 @@
     android:id="@+id/activity_settings_frmSettingsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.androideduio.datapersistance.ui.SettingsActivity" />
+    tools:context=".ui.sharedpref.SettingsActivity" />
